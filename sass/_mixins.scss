@@ -1,0 +1,85 @@
+//
+// Mixins
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    *zoom: 1;
+}
+
+@mixin boxSizing($val: content-box) {
+    -webkit-box-sizing: $val;
+    -moz-box-sizing: $val;
+    -ms-box-sizing: $val;
+    -o-box-sizing: $val;
+    box-sizing: $val;
+}
+
+//
+// Font Sizing
+//
+// Sizes:
+//  32px - XL
+//  24px - LG
+//  18px - MD
+//  16px - base / REG -- consolidate with 17px
+//  14px - SM
+//  12px - XSM
+
+@mixin fontSize($size) {
+    $_finalSize: 1;
+    $_baseSize: 16;
+
+    @if $size == REG {
+        $_finalSize: 16 / $_baseSize;
+    } @else if $size == XL {
+        $_finalSize: 32 / $_baseSize;
+    } @else if $size == LG {
+        $_finalSize: 24 / $_baseSize;
+    } @else if $size == MD {
+        $_finalSize: 18 / $_baseSize;
+    } @else if $size == SM {
+        $_finalSize: 14 / $_baseSize;
+    } @else if $size == XSM {
+        $_finalSize: 12 / $_baseSize;
+    }
+
+    @if $size == base {
+        font-size: $FONT_BASE_SIZE;
+    } @else {
+        font-size: #{$_finalSize}em;
+        font-size: #{$_finalSize}rem;
+    }
+}
+
+//
+// Font Weight
+// - altering weights based on custom font face
+
+@mixin fontWeight($weight) {
+    $_finalWeight: 400;
+
+    @if $weight == normal {
+        $_finalWeight: 400;
+    } @else if $weight == semibold {
+        $_finalWeight: 600;
+    } @else if $weight == bold {
+        $_finalWeight: 700;
+    } @else if $weight == light { // not loaded as part of web font
+        $_finalWeight: 400;
+    }
+
+    font-weight: $_finalWeight;
+}
+
+@mixin fontFace() {
+    font-family: "Open Sans", Helvetica, sans-serif;
+}

@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 100; }
+
+.sectionCnt {
+  clear: both; }
+  .sectionCnt_brdr {
+    border: 15px white solid;
+    padding: 15px; }
+
+.contentCnt {
+  padding: 15px; }
+
+@media (min-width: 600px) {
+  .contentCnt {
+    padding: 60px 30px; } }
+@media (min-width: 800px) {
+  .contentCnt {
+    padding: 60px 90px; } }
+.row {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  padding-left: 15px;
+  width: 100%;
+  overflow: hidden; }
+  .row:after {
+    *zoom: 1; }
+    .row:after:before, .row:after:after {
+      display: table;
+      content: ""; }
+    .row:after:after {
+      clear: both; }
+  .row_padFlush {
+    padding: 0; }
+    .row_padFlush [class*='col_'] {
+      padding: 0; }
+
+[class*='col_'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding-right: 15px; }
+
+.col_1 {
+  width: 8.33333%; }
+.col_2 {
+  width: 16.66667%; }
+.col_3 {
+  width: 25%; }
+.col_4 {
+  width: 33.33333%; }
+.col_5 {
+  width: 41.66667%; }
+.col_6 {
+  width: 50%; }
+.col_7 {
+  width: 58.33333%; }
+.col_8 {
+  width: 66.66667%; }
+.col_9 {
+  width: 75%; }
+.col_10 {
+  width: 83.33333%; }
+.col_11 {
+  width: 91.66667%; }
+.col_12 {
+  width: 100%; }
+@media (max-width: 639PX) {
+  .col_SM1 {
+    width: 8.33333%; }
+  .col_SM2 {
+    width: 16.66667%; }
+  .col_SM3 {
+    width: 25%; }
+  .col_SM4 {
+    width: 33.33333%; }
+  .col_SM5 {
+    width: 41.66667%; }
+  .col_SM6 {
+    width: 50%; }
+  .col_SM7 {
+    width: 58.33333%; }
+  .col_SM8 {
+    width: 66.66667%; }
+  .col_SM9 {
+    width: 75%; }
+  .col_SM10 {
+    width: 83.33333%; }
+  .col_SM11 {
+    width: 91.66667%; }
+  .col_SM12 {
+    width: 100%; } }
+@media (min-width: 640px) {
+  .col_MD1 {
+    width: 8.33333%; }
+  .col_MD2 {
+    width: 16.66667%; }
+  .col_MD3 {
+    width: 25%; }
+  .col_MD4 {
+    width: 33.33333%; }
+  .col_MD5 {
+    width: 41.66667%; }
+  .col_MD6 {
+    width: 50%; }
+  .col_MD7 {
+    width: 58.33333%; }
+  .col_MD8 {
+    width: 66.66667%; }
+  .col_MD9 {
+    width: 75%; }
+  .col_MD10 {
+    width: 83.33333%; }
+  .col_MD11 {
+    width: 91.66667%; }
+  .col_MD12 {
+    width: 100%; } }
+@media (min-width: 800PX) {
+  .col_LG1 {
+    width: 8.33333%; }
+  .col_LG2 {
+    width: 16.66667%; }
+  .col_LG3 {
+    width: 25%; }
+  .col_LG4 {
+    width: 33.33333%; }
+  .col_LG5 {
+    width: 41.66667%; }
+  .col_LG6 {
+    width: 50%; }
+  .col_LG7 {
+    width: 58.33333%; }
+  .col_LG8 {
+    width: 66.66667%; }
+  .col_LG9 {
+    width: 75%; }
+  .col_LG10 {
+    width: 83.33333%; }
+  .col_LG11 {
+    width: 91.66667%; }
+  .col_LG12 {
+    width: 100%; } }
+.col_padFlush {
+  padding: 0; }
+
+.box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px; }
+  .box_bgSeaGreen {
+    background-color: #f0f4f4; }
+  .box_bgPink {
+    background-color: #f2e5ee; }
+  .box_bgWhite {
+    background-color: #FFF; }
+  .box_brdr {
+    border: 15px white solid;
+    height: 100%; }
+  .box_padFlush {
+    padding: 0; }
+  .box_padDouble {
+    padding: 30px; }
+
+.vSpace {
+  margin-bottom: 15px; }
+  .vSpace_tight {
+    margin-bottom: 7.5px; }
+  .vSpace_loose {
+    margin-bottom: 22.5px; }
+  .vSpace_chasm {
+    margin-bottom: 30px; }
+
+.vList > + * {
+  padding-top: 15px; }
+.vList_tight > + * {
+  padding-top: 7.5px; }
+.vList_loose > + * {
+  padding-top: 22.5px; }
+.vList_chasm > + * {
+  padding-top: 30px; }
+
+.header-name {
+  position: absolute;
+  top: 186px;
+  right: -138px;
+  z-index: 1000;
+  color: white;
+  font-size: 48px;
+  text-transform: uppercase;
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg); }
+
+.hero {
+  background-image: url(/images/wildflowers.jpg);
+  background-position: center;
+  background-size: cover; }
+
+.hero-brdr {
+  position: relative;
+  margin: -15px;
+  height: 100%;
+  border: 15px solid #6d6489;
+  opacity: .5; }
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image: -webkit-linear-gradient(-20deg, transparent 40%, #6d6489 40%);
+  /* Firefox 3.6 - 15 */
+  background-image: -moz-linear-gradient(110deg, transparent 40%, #6d6489 40%);
+  /* Opera 11.1 - 12 */
+  background-image: -o-linear-gradient(110deg, transparent 40%, #6d6489 40%);
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image: linear-gradient(110deg, transparent 40%, #6d6489 40%);
+  /* IE */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d6489', endColorstr='#006d6489',GradientType=1); }
+
+.hero-content {
+  position: absolute;
+  top: 35%;
+  margin-left: -15px;
+  padding-top: 195px;
+  padding-left: 45px;
+  height: 300px;
+  width: 100%;
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+  /*background: url(/images/brush.png) no-repeat;*/ }
+
+/*# sourceMappingURL=style.css.map */

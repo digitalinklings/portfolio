@@ -1,0 +1,82 @@
+// header
+.header-name {
+  position: absolute;
+  top: 186px;
+  right: -138px;
+  z-index: 1000;
+  color: white;
+  font-size: 48px;
+  text-transform: uppercase;
+
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+
+  /* IE */
+  -ms-transform: rotate(-90deg);
+
+  /* Opera */
+  -o-transform: rotate(-90deg);
+}
+
+// nav
+
+// hero
+
+.hero {
+  background-image: url(/images/wildflowers.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-brdr {
+  position: relative;
+  margin: -$PAD;
+  height: 100%;
+
+  border: $PAD solid #6d6489;
+  opacity: .5;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(-20deg, transparent 40%, #6d6489 40%);
+
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(110deg, transparent 40%, #6d6489 40%);
+
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient(110deg, transparent 40%, #6d6489 40%);
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:
+    linear-gradient(110deg, transparent 40%, #6d6489 40%);
+
+  /* IE */
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d6489', endColorstr='#006d6489',GradientType=1);
+}
+
+.hero-content {
+  position: absolute;
+  top: 35%;
+  margin-left: -15px;
+  padding-top: 195px;
+  padding-left: 45px;
+  height: 300px;
+  width: 100%;
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+  /*background: url(/images/brush.png) no-repeat;*/
+}

@@ -1,0 +1,94 @@
+//
+// Grid
+//
+// The bones and structure of the layout
+
+.sectionCnt {
+  clear:both;
+
+  &_brdr {
+    border: 15px white solid;
+    padding: $PAD;
+  }
+}
+
+.contentCnt {
+  padding: $PAD;
+}
+@media (min-width:600px) {
+  .contentCnt {
+    padding: ($PAD*4) $PAD*2;
+  }
+}
+@media (min-width:800px) {
+  .contentCnt {
+    padding: ($PAD*4) ($PAD*6);
+  }
+}
+
+
+.row {
+  @include boxSizing(border-box);
+  clear: both;
+  padding-left: $PAD;
+  width: 100%;
+  overflow: hidden;
+  &:after {
+    @include clearfix;
+  }
+  &_padFlush {
+    padding:0;
+    & [class*='col_'] {
+      padding: 0;
+    }
+  }
+}
+
+[class*='col_'] {
+  @include boxSizing(border-box);
+  float: left;
+  padding-right: $PAD;
+}
+
+.col {
+
+  @mixin COL_WIDTH($COL_INDEX) {
+    width: (100% / 12) * $COL_INDEX;
+  }
+
+  @for $COL_NUM from 1 through 12 {
+    &_#{$COL_NUM} {
+        @include COL_WIDTH($COL_NUM);
+    }
+  }
+
+  @media #{$BREAK_MOBILE} {
+    @for $COL_NUM from 1 through 12 {
+      &_SM#{$COL_NUM} {
+          @include COL_WIDTH($COL_NUM);
+      }
+    }
+  }
+
+  @media #{$BREAK_TABLET} {
+    @for $COL_NUM from 1 through 12 {
+      &_MD#{$COL_NUM} {
+          @include COL_WIDTH($COL_NUM);
+      }
+    }
+  }
+
+  @media #{$BREAK_DESKTOP} {
+    @for $COL_NUM from 1 through 12 {
+      &_LG#{$COL_NUM} {
+          @include COL_WIDTH($COL_NUM);
+      }
+    }
+  }
+
+  &_padFlush {
+    padding: 0;
+  }
+
+
+}

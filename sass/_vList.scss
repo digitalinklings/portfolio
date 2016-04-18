@@ -1,0 +1,21 @@
+//
+// vertical list spacing
+
+.vList {
+  > + * {
+    padding-top: $PAD;
+  }
+
+  &_tight > + * {
+    padding-top: $PAD /2;
+  }
+
+  &_loose > + * {
+    padding-top: ($PAD /2) +$PAD;
+  }
+
+  &_chasm > + * {
+    padding-top: $PAD *2;
+  }
+
+}

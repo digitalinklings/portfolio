@@ -1,0 +1,26 @@
+@mixin bgColor {
+    $colorList: bgSeaGreen $COLOR_SEAGREEN,
+                bgPink $COLOR_PINK,
+                bgWhite $COLOR_WHITE;
+    @each $item in $colorList {
+        &_#{nth($item, 1)} {
+            background-color: #{nth($item, 2)};
+        }
+    }
+}
+
+.box {
+  @include boxSizing(border-box);
+  padding: $PAD;
+  @include bgColor;
+  &_brdr {
+    border: $PAD white solid;
+    height: 100%;
+  }
+  &_padFlush {
+    padding: 0;
+  }
+  &_padDouble {
+    padding: $PAD*2;
+  }
+}

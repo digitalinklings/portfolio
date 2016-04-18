@@ -1,0 +1,19 @@
+//
+// vertical spacing
+
+.vSpace {
+  margin-bottom: $PAD;
+
+  &_tight {
+    margin-bottom: $PAD /2;
+  }
+
+  &_loose {
+    margin-bottom: ($PAD /2) +$PAD;
+  }
+
+  &_chasm {
+    margin-bottom: $PAD *2;
+  }
+
+}
